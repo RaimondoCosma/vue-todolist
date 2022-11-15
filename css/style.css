@@ -10,36 +10,63 @@
 /* -------------------------
     COMMON   
 ------------------------- */
+body {
+    position: relative;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(to right top, #030b16, #004358, #008381, #3bc380, #d1fa66);
+}
 #app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 43.75rem;
+    width: 100%;
     margin: auto;
-    height: 100vh;
-
+    padding: 3.125rem 1.875rem;
+    border-radius: 1.25rem;
+    background-color: white;
+    box-shadow: 15px 15px 18px 0px #000000;
 }
 img {
     max-width: 100%;
 }
 ul {
+    overflow: auto;
+    height: 17rem;
     list-style: none;
     padding: 1.875rem 1.25rem;
-    background-color: rgb(245, 142, 197);
+    background-color: rgb(251, 190, 222);
     border-radius: 1.25rem;
 }
 ul li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.25rem;
     text-align: left;
     padding: .625rem;
     border-bottom: 1px solid lightgrey;
+    cursor: default;
 
+}
+.item {
+    transition: transform 0.2s ease-in;
+}
+ul li:hover .item {
+    transform: scale(1.06);
 }
 .line-through {
     text-decoration: line-through;
+    border-radius: .9375rem;
+    color: white;
+    background-color: green;
 }
 
 /* -------------------------
@@ -73,9 +100,25 @@ form {
 }
 #todo-text {
     width: 70%;
+    background-color: #f5f5f5;
+}
+#todo-text:focus-visible{
+    border: none;
+    background-color: white;
 }
 .submit-btn {
+    color: white;
+    font-family: 'Lato', sans-serif;
     background-color: rgb(74, 74, 240);
     margin-left: .625rem;
 }
-
+.submit-btn:active {
+    transform: scale(.94);
+}
+.fa-xmark {
+    cursor: pointer;
+    transition: transform 0.2s linear;
+}
+.fa-xmark:hover {
+    transform: scale(1.07);
+}
