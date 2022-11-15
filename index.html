@@ -22,8 +22,12 @@
                 <button class="submit-btn" type="submit">Aggiungi</button>
             </form>
             <section id="my-list">
-                <ul></ul>
-                <h2>Non sono presenti elementi 🥲</h2>
+                <ul v-if="myList.length > 0">
+                    <li v-for="(item, index) in myList">
+                        {{ item.text }}
+                    </li>
+                </ul>
+                <h2 v-else>Non sono presenti elementi 🥲</h2>
             </section>
         </main>
     </div>
