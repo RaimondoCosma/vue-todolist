@@ -23,6 +23,22 @@
 img {
     max-width: 100%;
 }
+ul {
+    list-style: none;
+    padding: 1.875rem 1.25rem;
+    background-color: rgb(245, 142, 197);
+    border-radius: 1.25rem;
+}
+ul li {
+    font-size: 1.25rem;
+    text-align: left;
+    padding: .625rem;
+    border-bottom: 1px solid lightgrey;
+
+}
+.line-through {
+    text-decoration: line-through;
+}
 
 /* -------------------------
     HEADER   

@@ -23,7 +23,7 @@
             </form>
             <section id="my-list">
                 <ul v-if="myList.length > 0">
-                    <li v-for="(item, index) in myList">
+                    <li v-for="(item, index) in myList" @click="isDone(index)" :class="{ 'line-through': item.done === true }">
                         {{ item.text }}
                     </li>
                 </ul>
