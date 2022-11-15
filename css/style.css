@@ -57,10 +57,11 @@ ul li {
 
 }
 .item {
+    width: 90%;
     transition: transform 0.2s ease-in;
 }
 ul li:hover .item {
-    transform: scale(1.06);
+    transform: scale(1.06)translateX(10px);
 }
 .line-through {
     text-decoration: line-through;
