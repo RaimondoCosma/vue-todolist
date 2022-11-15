@@ -18,13 +18,13 @@
             </div>
         </header>
         <main>
-            <form>
-                <input type="text" name="text" id="todo-text" placeholder="Inserisci testo to do">
+            <form @submit.prevent="addTodo">
+                <input type="text" id="todo-text" placeholder="Inserisci testo to do" v-model="newTodo" required>
                 <button class="submit-btn" type="submit">Aggiungi</button>
             </form>
             <section id="my-list">
                 <ul v-if="myList.length > 0">
-                    <li v-for="(item, index) in myList" @click="isDone(index)" :class="{ 'line-through': item.done === true }">
+                    <li v-for="(item, index) in myList" :class="{ 'line-through': item.done === true }">
                         <span class="item">{{ item.text }}</span>
                         <span><i class="fa-solid fa-xmark" @click="removeItem(index)"></i></span>
                     </li>
