@@ -22,7 +22,9 @@ createApp({
             ]
         }
     },
-  methods: {
-
-  }
+    methods: {
+        removeItem(i){
+            this.myList.splice(i, 1)
+        }
+    }
 }).mount('#app')
