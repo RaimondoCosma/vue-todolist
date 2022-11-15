@@ -10,7 +10,7 @@ createApp({
             myList: [
                 {
                     text: "Fare la spesa",
-                    done: true,
+                    done: false,
                 },
                 {
                     text: "Vedere un film",
@@ -34,6 +34,11 @@ createApp({
             }
             this.myList.push(newItemTodo);
             this.newTodo = '';
-        }
+        },
+        // isDone(i){
+        //     this.myList.done = !this.myList.done;
+        //     console.log(i);
+        //     console.log(this.myList.done)
+        // }
     }
 }).mount('#app')
